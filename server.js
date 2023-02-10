@@ -1,10 +1,15 @@
 import express from "express";
 import config from "./config";
+import router from "./routes";
 // TODO: import router from routes/
 
 const app = express();
 
+//http://localhost:5000/api/test
+
+//Middleware
 app.use(express.json());
+app.use("/api", router);
 
 // TODO: use the imported router to handle all requests
 
